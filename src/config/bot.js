@@ -2,6 +2,8 @@ import { logger } from '../utils/logger.js';
 
 
 export const botConfig = {
+  prefix: "A!",
+  
   // =========================
   // BOT PRESENCE (what users see under the bot name)
   // =========================
@@ -25,7 +27,7 @@ export const botConfig = {
     activities: [
       {
         // Text users will see (example: "Playing /help | Titan Bot").
-        name: "Made with ❤️",
+        name: "Made by special_king_is_back",
         // Activity type number (0 = Playing).
         type: 0, 
       },
