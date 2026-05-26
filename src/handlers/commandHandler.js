@@ -1,6 +1,6 @@
 export default (client) => {
     const fs = require("fs");
-    const config = require("../config.json");
+    if (!message.content.startsWith("A!")) return;
 
     client.commands = new Map();
 
