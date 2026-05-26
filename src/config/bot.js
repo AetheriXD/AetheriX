@@ -1,5 +1,7 @@
 import { logger } from '../utils/logger.js';
+import commandHandler from "./handlers/commandHandler.js";
 
+commandHandler(client);
 
 export const botConfig = {
   prefix: "A!",
