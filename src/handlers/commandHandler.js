@@ -1,4 +1,4 @@
-module.exports = (client) => {
+export default (client) => {
     const fs = require("fs");
     const config = require("../config.json");
 
