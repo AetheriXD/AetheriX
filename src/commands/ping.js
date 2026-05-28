@@ -1,7 +1,13 @@
 export default {
-  name: "ping",
+  data: {
+    name: "ping",
+    description: "Ping command",
+  },
 
-  async execute(message) {
-    message.reply("Pong!");
+  async execute(interaction) {
+    return interaction.reply({
+      content: "Pong!",
+      ephemeral: true,
+    });
   },
 };
