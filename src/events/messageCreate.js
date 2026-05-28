@@ -1,21 +1,4 @@
-export default {
-  name: "messageCreate",
 
-  async execute(message, client) {
-    if (message.author.bot) return;
-
-    const prefix = "A!";
-
-    if (!message.content.startsWith(prefix)) return;
-
-    const args = message.content.slice(prefix.length).trim().split(/ +/);
-    const command = args.shift().toLowerCase();
-
-    if (command === "ping") {
-      return message.reply("Pong!");
-    }
-  },
-};
 
 
 
