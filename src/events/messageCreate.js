@@ -16,6 +16,18 @@ export default {
   name: Events.MessageCreate,
   async execute(message, client) {
     try {
+      const prefix = "A!";
+
+if (message.author.bot) return;
+
+if (!message.content.startsWith(prefix)) return;
+
+const args = message.content.slice(prefix.length).trim().split(/ +/);
+const command = args.shift().toLowerCase();
+
+if (command === "ping") {
+  await message.reply("Pong!");
+}
       
       if (message.author.bot || !message.guild) return;
 
