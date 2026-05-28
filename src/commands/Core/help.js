@@ -158,7 +158,7 @@ export async function createInitialHelpMenu(client) {
     );
 
     embed.setFooter({ 
-        text: "Made by special_king_is_back" 
+        text: "Made by special_king_is_back 🔥⭐" 
     });
     embed.setTimestamp();
 
@@ -169,12 +169,12 @@ export async function createInitialHelpMenu(client) {
 
     const supportButton = new ButtonBuilder()
         .setLabel("Support Server")
-        .setURL("https://discord.gg/qdk27xnH7")
+        .setURL("https://discord.gg/ufhSvCBMFZ")
         .setStyle(ButtonStyle.Link);
 
     const touchpointButton = new ButtonBuilder()
-        .setLabel("Learn from special king and Nova")
-        .setURL("https://discord.gg/ZsPanfYDC")
+        .setLabel("Official Server")
+        .setURL("https://discord.gg/BRwMCQ9bEw")
         .setStyle(ButtonStyle.Link);
 
     const selectRow = createSelectMenu(
