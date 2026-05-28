@@ -1,4 +1,27 @@
+import config from "../config.json" assert { type: "json" };
 
+export default {
+  name: "messageCreate",
+
+  async execute(message, client) {
+    if (message.author.bot) return;
+
+    if (!message.content.startsWith(config.prefix)) return;
+
+    const args = message.content
+      .slice(config.prefix.length)
+      .trim()
+      .split(/ +/);
+
+    const commandName = args.shift().toLowerCase();
+
+    const command = client.commands.get(commandName);
+
+    if (!command) return;
+
+    command.execute(message, args, client);
+  },
+};
 
 
 
