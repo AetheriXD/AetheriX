@@ -1,25 +1,19 @@
-import config from "../config.json" assert { type: "json" };
-
 export default {
   name: "messageCreate",
 
   async execute(message, client) {
     if (message.author.bot) return;
 
-    if (!message.content.startsWith(config.prefix)) return;
+    const prefix = "A!";
 
-    const args = message.content
-      .slice(config.prefix.length)
-      .trim()
-      .split(/ +/);
+    if (!message.content.startsWith(prefix)) return;
 
-    const commandName = args.shift().toLowerCase();
+    const args = message.content.slice(prefix.length).trim().split(/ +/);
+    const command = args.shift().toLowerCase();
 
-    const command = client.commands.get(commandName);
-
-    if (!command) return;
-
-    command.execute(message, args, client);
+    if (command === "ping") {
+      return message.reply("Pong!");
+    }
   },
 };
 
